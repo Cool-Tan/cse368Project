@@ -168,6 +168,18 @@ def visualize_mst_map(cities, mst_edges):
         r1, c1 = name_to_coord[city1]
         r2, c2 = name_to_coord[city2]
         plt.plot([c1, c2], [r1, r2], color='blue', linewidth=1)
+        mid_r = (r1 + r2) / 2
+        mid_c = (c1 + c2) / 2
+        plt.text(
+            mid_c,
+            mid_r,
+            f"{cost:.0f}",
+            fontsize=6,
+            color='black',
+            ha='center',
+            va='center',
+            bbox=dict(facecolor='white', edgecolor='none', alpha=0.6, pad=0.5),
+        )
 
     plt.gca().invert_yaxis()
     plt.title("MST High-Speed Rail Network")
