@@ -144,6 +144,12 @@ def visualize_mst_ascii(cities, mst_edges):
 
     print("\nMST Connection Summary:")
     print("=" * 70)
+    for city in sorted(cities):
+        if connections[city]:
+            print(f"\n{city}:")
+            for connected_city, cost in sorted(connections[city]):
+                print(f"  └─ {connected_city} (cost: {cost:.2f})")
+    print("=" * 70)
 
 
 def visualize_mst_map(cities, mst_edges):
@@ -165,16 +171,9 @@ def visualize_mst_map(cities, mst_edges):
 
     plt.gca().invert_yaxis()
     plt.title("MST High-Speed Rail Network")
-    plt.xlabel("Column")
-    plt.ylabel("Row")
+    plt.axis('off')
     plt.tight_layout()
     plt.show()
-    for city in sorted(cities):
-        if connections[city]:
-            print(f"\n{city}:")
-            for connected_city, cost in sorted(connections[city]):
-                print(f"  └─ {connected_city} (cost: {cost:.2f})")
-    print("=" * 70)
 
 
 # Main execution
