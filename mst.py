@@ -1,5 +1,7 @@
 import csv
-from plot import visualize_mst_map
+import matplotlib.pyplot as plt
+
+from full import get_cities
 
 
 class UnionFind:
@@ -148,6 +150,42 @@ def visualize_mst_ascii(cities, mst_edges):
             for connected_city, cost in sorted(connections[city]):
                 print(f"  └─ {connected_city} (cost: {cost:.2f})")
     print("=" * 70)
+
+
+def visualize_mst_map(cities, mst_edges):
+    """Plot MST connections on the terrain grid coordinates"""
+    name_to_coord = {name: (row, col) for name, row, col in get_cities()}
+
+    plt.figure(figsize=(10, 6))
+
+    # Plot cities
+    for name, (row, col) in name_to_coord.items():
+        plt.scatter(col, row, color='red')
+        plt.text(col + 1, row + 1, name, fontsize=6)
+
+    # Plot MST edges
+    for city1, city2, cost in mst_edges:
+        r1, c1 = name_to_coord[city1]
+        r2, c2 = name_to_coord[city2]
+        plt.plot([c1, c2], [r1, r2], color='blue', linewidth=1)
+        mid_r = (r1 + r2) / 2
+        mid_c = (c1 + c2) / 2
+        plt.text(
+            mid_c,
+            mid_r,
+            f"{cost:.0f}",
+            fontsize=6,
+            color='black',
+            ha='center',
+            va='center',
+            bbox=dict(facecolor='white', edgecolor='none', alpha=0.6, pad=0.5),
+        )
+
+    plt.gca().invert_yaxis()
+    plt.title("MST High-Speed Rail Network")
+    plt.axis('off')
+    plt.tight_layout()
+    plt.show()
 
 
 # Main execution
