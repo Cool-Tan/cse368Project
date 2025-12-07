@@ -1,0 +1,17 @@
+Medium Geology Cost per mile:
+12,050 Euro/m in 2016 = 15,679.60 Euro/m in 2025
+15,679.60 Euro/m = $18,120.52 per meter
+$18,120.52 per meter = $29,162,150.14 per mile
+
+Tunnel Cost per mile:
+14,825 Euro/m in 2016 = 19,290.47 Euro/m in 2025
+19,290.47 Euro/m = $22,464.64 per meter
+$22,464.64 per meter = $36,153,333.60 per mile
+
+Viaduct Cost per mile:
+$50,000,000 per mile
+
+
+Works Cited
+Forster, Mike. “Caltrain Viaducts — A Showcase Opportunity: Save $11B — Attractive- Better SF Stations — Parks Underneath Press enter or click to view image in full size.” Medium, 2nd 6 2020, https://mike-forster.medium.com/caltrain-viaducts-a-showcase-opportunity-save-11b-attractive-better-sf-stations-parks-838cb84c219f. Accessed 20 11 2025.
+Moret, Yvonne, and Herbert H. Einstein. “Construction Cost and Duration Uncertainty Model: Application to High-Speed Rail Line Project.” Journal of Construction Engineering and Management, vol. 142, no. 10, 2016. ASCE Library, https://doi.org/10.1061/(ASCE)CO.1943-7862.0001161. Accessed 4 11 2025.
