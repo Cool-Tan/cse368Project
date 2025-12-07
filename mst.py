@@ -1,4 +1,5 @@
 import csv
+from plot import visualize_mst_map
 
 
 class UnionFind:
@@ -168,5 +169,8 @@ if __name__ == "__main__":
 
     # Show connections
     visualize_mst_ascii(cities, mst_edges)
+
+    print("\nVisualizing MST on map...")
+    visualize_mst_map(cities, mst_edges)
 
     print("\nDone! MST results saved to mst_results.csv")
